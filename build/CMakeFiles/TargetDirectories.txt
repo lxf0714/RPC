@@ -1,5 +1,8 @@
 /home/ubuntu2204/rpc/RPC/build/CMakeFiles/edit_cache.dir
 /home/ubuntu2204/rpc/RPC/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu2204/rpc/RPC/build/src/CMakeFiles/mprpc.dir
+/home/ubuntu2204/rpc/RPC/build/src/CMakeFiles/edit_cache.dir
+/home/ubuntu2204/rpc/RPC/build/src/CMakeFiles/rebuild_cache.dir
 /home/ubuntu2204/rpc/RPC/build/example/CMakeFiles/edit_cache.dir
 /home/ubuntu2204/rpc/RPC/build/example/CMakeFiles/rebuild_cache.dir
 /home/ubuntu2204/rpc/RPC/build/example/callee/CMakeFiles/provider.dir

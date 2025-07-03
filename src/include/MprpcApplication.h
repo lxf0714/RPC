@@ -9,7 +9,7 @@
     static MprpcApplication& GetInstance();
 
   private:
-    MprpcApplication();
+    MprpcApplication(){}
     MprpcApplication(const MprpcApplication&) = delete; // 禁止拷贝构造
     MprpcApplication& operator=(const MprpcApplication&) = delete;// 禁止赋值构造
     MprpcApplication(MprpcApplication&&) = delete;// 禁止移动构造

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu2204/rpc/RPC/build/CMakeFiles /home/ubuntu2204/rpc/RPC/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ubuntu2204/rpc/RPC/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu2204/rpc/RPC/build/CMakeFiles /home/ubuntu2204/rpc/RPC/build/src//CMakeFiles/progress.marks
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu2204/rpc/RPC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu2204/rpc/RPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named mprpc
+# Convenience name for target.
+src/CMakeFiles/mprpc.dir/rule:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/mprpc.dir/rule
+.PHONY : src/CMakeFiles/mprpc.dir/rule
 
-# Build rule for target.
-mprpc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mprpc
+# Convenience name for target.
+mprpc: src/CMakeFiles/mprpc.dir/rule
 .PHONY : mprpc
 
 # fast build rule for target.
 mprpc/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
 .PHONY : mprpc/fast
 
-#=============================================================================
-# Target rules for targets named provider
+MprpcApplication.o: MprpcApplication.cc.o
+.PHONY : MprpcApplication.o
 
-# Build rule for target.
-provider: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 provider
-.PHONY : provider
+# target to build an object file
+MprpcApplication.cc.o:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/MprpcApplication.cc.o
+.PHONY : MprpcApplication.cc.o
 
-# fast build rule for target.
-provider/fast:
-	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
-.PHONY : provider/fast
+MprpcApplication.i: MprpcApplication.cc.i
+.PHONY : MprpcApplication.i
+
+# target to preprocess a source file
+MprpcApplication.cc.i:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/MprpcApplication.cc.i
+.PHONY : MprpcApplication.cc.i
+
+MprpcApplication.s: MprpcApplication.cc.s
+.PHONY : MprpcApplication.s
+
+# target to generate assembly for a file
+MprpcApplication.cc.s:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/MprpcApplication.cc.s
+.PHONY : MprpcApplication.cc.s
+
+RpcProvider.o: RpcProvider.cc.o
+.PHONY : RpcProvider.o
+
+# target to build an object file
+RpcProvider.cc.o:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/RpcProvider.cc.o
+.PHONY : RpcProvider.cc.o
+
+RpcProvider.i: RpcProvider.cc.i
+.PHONY : RpcProvider.i
+
+# target to preprocess a source file
+RpcProvider.cc.i:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/RpcProvider.cc.i
+.PHONY : RpcProvider.cc.i
+
+RpcProvider.s: RpcProvider.cc.s
+.PHONY : RpcProvider.s
+
+# target to generate assembly for a file
+RpcProvider.cc.s:
+	cd /home/ubuntu2204/rpc/RPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/RpcProvider.cc.s
+.PHONY : RpcProvider.cc.s
 
 # Help Target
 help:
@@ -151,7 +187,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mprpc"
-	@echo "... provider"
+	@echo "... MprpcApplication.o"
+	@echo "... MprpcApplication.i"
+	@echo "... MprpcApplication.s"
+	@echo "... RpcProvider.o"
+	@echo "... RpcProvider.i"
+	@echo "... RpcProvider.s"
 .PHONY : help
 
 
@@ -163,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu2204/rpc/RPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

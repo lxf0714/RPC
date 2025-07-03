@@ -42,4 +42,5 @@ link_directories(
 
 # 添加子目录
 add_subdirectory(src)
+# 添加示例目录
 add_subdirectory(example)

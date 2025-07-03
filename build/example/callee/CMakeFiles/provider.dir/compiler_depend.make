@@ -693,8 +693,12 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
   /usr/local/include/google/protobuf/message.h \
   /usr/local/include/google/protobuf/extension_set.h \
   /usr/include/c++/11/cassert \
-  /usr/local/include/google/protobuf/service.h
+  /usr/local/include/google/protobuf/service.h \
+  ../src/include/MprpcApplication.h \
+  ../src/include/RpcProvider.h
 
+
+../src/include/RpcProvider.h:
 
 ../example/callee/userservice.cc:
 
@@ -1103,6 +1107,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: ../example/callee/users
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+../src/include/MprpcApplication.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
