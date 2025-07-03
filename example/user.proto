@@ -30,4 +30,4 @@ service UserServiceRpc
   rpc Login(LoginRequest)  returns(LoginResponse);
 
 }
-//protoc test.proto --cpp_out=./
+//protoc user.proto --cpp_out=./

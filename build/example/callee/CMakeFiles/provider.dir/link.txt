@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/provider.dir/userservice.cc.o CMakeFiles/provider.dir/__/user.pb.cc.o -o ../../../bin/provider   -L/home/ubuntu2204/rpc/RPC/lib  -L/usr/local/lib  -Wl,-rpath,/home/ubuntu2204/rpc/RPC/lib:/usr/local/lib -lprotobuf 
